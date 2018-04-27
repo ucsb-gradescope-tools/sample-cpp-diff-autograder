@@ -3,19 +3,19 @@ BINARIES=helloWorld helloStderr helloFile readFile readStdin countToN
 all:	${BINARIES}
 
 helloWorld: helloWorld.cpp
-	g++ -Wall -fsyntax-only -std=c++11 helloWorld.cpp
+	clang++ -Wall -fsyntax-only -std=c++11 helloWorld.cpp
 
 helloStderr: helloStderr.cpp
-	g++ -Wall -fsyntax-only -std=c++11 helloStderr.cpp
+	clang++ -Wall -fsyntax-only -std=c++11 helloStderr.cpp
 
 helloFile: helloStderr.cpp
-	g++ -Wall -fsyntax-only -std=c++11 helloFile.cpp
+	clang++ -Wall -fsyntax-only -std=c++11 helloFile.cpp
 
 readFile: readFile.cpp
-	g++ -Wall -fsyntax-only -std=c++11 readFile.cpp
+	clang++ -Wall -fsyntax-only -std=c++11 readFile.cpp
 
 readStdin: readStdin.cpp
-	g++ -Wall -fsyntax-only -std=c++11 readStdin.cpp
+	clang++ -Wall -fsyntax-only -std=c++11 readStdin.cpp
 
 countToN: countToN.cpp
-	g++ -Wall -fsyntax-only -std=c++11 countToN.cpp
+	clang++ -Wall -fsyntax-only -std=c++11 countToN.cpp
