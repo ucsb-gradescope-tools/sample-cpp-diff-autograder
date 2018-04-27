@@ -1,5 +1,7 @@
 A sample C++ autograder repo to show how diff-based autograding works. The corresponding assignment can be found at https://github.com/ucsb-gradescope-tools/sample-cpp-assignment.
 
+**WARNING: Editing bash scripts (e.g. diffs.sh) on Windows will convert the line endings to Windows style, causing the script to be unusable by the Docker container. Either edit the files in a Unix/Mac environment or use a tool to de-convert the line endings BEFORE uploading your autograder.zip.**
+
 ## Components
 
 ### EXECUTION-FILES
