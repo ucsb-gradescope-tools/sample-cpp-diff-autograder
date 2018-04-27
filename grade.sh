@@ -1,7 +1,11 @@
 #!/bin/sh
 
-cp /autograder/submission/change.cpp .
-cp /autograder/submission/calculate.cpp .
+cp /autograder/submission/countToN.cpp .
+cp /autograder/submission/helloFile.cpp .
+cp /autograder/submission/helloWorld.cpp .
+cp /autograder/submission/helloStderr.cpp .
+cp /autograder/submission/readFile.cpp .
+cp /autograder/submission/readStdin.cpp .
 
 if [ -d EXECUTION-FILES ]; then   
     cp -v EXECUTION-FILES/* .
