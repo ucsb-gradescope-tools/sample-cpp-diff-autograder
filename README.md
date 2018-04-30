@@ -4,9 +4,16 @@ A sample C++ autograder repo to show how diff-based autograding works. The corre
 
 ## Components
 
+### BUILD-FILES
+
+Any extra files (e.g. a Makefile) that should be in the same directory as the student submission while the submission is being built.    In this repo, the EXECUTION-FILES directory has the Makefile from the [assignment repo](https://github.com/ucsb-gradescope-tools/sample-cpp-assignment).
+
+When converting an assignment from submit.cs, any files that were "build files" on submit.cs go into this directory, along with the Makefile for the assignment.
+
 ### EXECUTION-FILES
 
-Any extra files (e.g. a makefile) that should be in the same directory as the student submission while the submission is being built or while it is running. In this repo, the EXECUTION-FILES directory has the same contents as the provided-files directory in the [assignment repo](https://github.com/ucsb-gradescope-tools/sample-cpp-assignment), plus extra files that contain the input for various test cases.
+Any extra files (e.g. data files) that should be in the same directory as the student submission while the submission is being executed. In this repo, the EXECUTION-FILES directory has `input.txt` file from the provided-files directory in the [assignment repo](https://github.com/ucsb-gradescope-tools/sample-cpp-assignment).
+
 
 ### REFERENCE-SOLUTION
 
