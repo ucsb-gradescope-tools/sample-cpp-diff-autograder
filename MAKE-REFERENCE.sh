@@ -3,6 +3,15 @@
 echo "This script will make the reference output"
 echo "Downloading the Gradescope gs-diff-based-testing tools"
 
+copy_files_from_dir_if_it_exists () {
+
+    if [ -d $1 ]; then
+	cp -v $1/* .
+    fi
+
+}
+
+
 git clone https://github.com/ucsb-gradescope-tools/gs-diff-based-testing.git
 cd gs-diff-based-testing
 git pull origin master
@@ -11,15 +20,14 @@ pip3 install jsonschema
 
 DIFF_TOOLS=../gs-diff-based-testing
 
-cd REFERENCE-SOLUTION
+/bin/rm -rf MAKE-REFERENCE-OUTPUT 
+mkdir -p MAKE-REFERENCE-OUTPUT
 
-if [ -d ../EXECUTION-FILES ]; then   
-    cp -v ../EXECUTION-FILES/* .
-fi
+cd MAKE-REFERENCE-OUTPUT
 
-if [ -d ../BUILD-FILES ]; then   
-    cp -v ../BUILD-FILES/* .
-fi
+copy_files_from_dir_if_it_exists ../EXECUTION-FILES
+copy_files_from_dir_if_it_exists ../BUILD-FILES
+copy_files_from_dir_if_it_exists ../REFERENCE-SOLUTION
 
 make clean
 make 
