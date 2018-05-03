@@ -16,7 +16,7 @@ git clone https://github.com/ucsb-gradescope-tools/gs-diff-based-testing.git
 cd gs-diff-based-testing
 git pull origin master
 cd ..
-pip3 install jsonschema
+pip3 install --user jsonschema
 
 DIFF_TOOLS=../gs-diff-based-testing
 
