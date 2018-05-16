@@ -14,7 +14,8 @@ copy_files_from_dir_if_it_exists () {
 
 git clone https://github.com/ucsb-gradescope-tools/gs-diff-based-testing.git
 cd gs-diff-based-testing
-git pull origin master
+git checkout factor-out-expected
+git pull origin factor-out-expected
 cd ..
 pip3 install --user jsonschema
 
